@@ -5,15 +5,15 @@
 
 .items {
     border-bottom: solid 1px #ccc;
-    display: flex; 
-    list-style: none; 
-    margin: 0; 
+    display: flex;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .item {
     margin-bottom: -1px;
-    
+
     &__link {
         border-radius: 0.5em 0.5em 0 0;
         border: solid 1px #ccc;
@@ -21,7 +21,7 @@
         margin: 0 0.2em;
         padding: 1em;
         transition: background ease 0.25s;
-        
+
         // Inactive
         &--inactive {
             background: #efefef;
@@ -53,11 +53,11 @@
 
             &:hover,
             &:active,
-            &:visited {      
-                background: white; 
-                border-bottom-color: transparent;        
+            &:visited {
+                background: white;
+                border-bottom-color: transparent;
                 color: $g-root__color--primary--03a;
-                cursor: default;                
+                cursor: default;
             }
 
         }
@@ -76,7 +76,7 @@
 
 // Variations
 // _________________________________________________________________________________________
-:host-context(saa-modal.color--02) {
+:host-context(saa-modal.color--02) { // this only applies when is child of saa-modal component
 
     $color__foreground: white;
     $color__background: $g-root__color--primary--01a;
@@ -114,8 +114,8 @@
 
             &:hover,
             &:active,
-            &:visited {      
-                background: $color__background; 
+            &:visited {
+                background: $color__background;
                 color: $color__foreground;
             }
 

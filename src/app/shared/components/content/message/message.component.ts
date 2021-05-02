@@ -4,7 +4,7 @@ import { Component, ContentChild, Directive, ElementRef } from '@angular/core';
 @Directive({ selector: 'saa-message-title' })
 export class MessageTitleDirective {}
 
-@Directive({ selector: 'saa-message-content' })
+@Directive({ selector: 'saa-message-content' }) // used in app.component.html <saa-message-content>...</saa-message-content>
 export class MessageContentDirective {}
 
 @Component({
@@ -14,6 +14,7 @@ export class MessageContentDirective {}
 })
 
 export class MessageComponent {
+    // If the <saa-message-content> tag is used, this variable won't be null.
     @ContentChild(MessageContentDirective) messageContent: MessageContentDirective;
     isLayout01 = false;
 
